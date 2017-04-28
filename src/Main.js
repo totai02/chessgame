@@ -59,7 +59,7 @@ var Main = (function () {
         this.app = express();
         this.server = http.createServer(this.app);
         this.io = SocketIO(this.server);
-        this.port = process.env.PORT || 3000;
+        this.port = process.env.PORT || 80;
         this.uri = 'mongodb://totai:123456@ds161410.mlab.com:61410/account_db';
         this.onConnect = function (socket) {
             socket.on("login", function (data) {
